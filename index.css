@@ -1,0 +1,123 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root{
+  --Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+  --Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+  --Grayish-Blue: hsl(212, 23%, 69%);
+  --Light-Grayish-Blue: hsl(210, 46%, 95%);
+}
+html{
+  font-size: 62.5%;
+  font-family: "Manrope", sans-serif;
+}
+body{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Light-Grayish-Blue);
+  position: relative;
+}
+h1{
+  color: var(--Very-Dark-Grayish-Blue);
+  font-weight: 500;
+  font-size: 2rem;
+}
+h2{
+  font-size: 1rem;
+  color: var(--Very-Dark-Grayish-Blue);
+}
+p{
+  font-size: 1.3rem;
+  color: var(--Desaturated-Dark-Blue);
+}
+button{
+  padding: .5rem;
+  border: none;
+  border-radius: 2rem;
+  background-color: var(--Light-Grayish-Blue);
+  &:hover{
+    background-color: rgb(188, 179, 179);
+  }
+}
+.main-section{
+  width: 70rem;
+  display: flex;
+  background-color: white;
+  border-radius: .8rem;
+}
+.left-section{
+width: 45%;
+border-radius: .8rem;
+}
+.right-section{
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.avatar-section{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.avatar-img{
+  width: 12%;
+  border-radius: 50% ;
+}
+.info-section{
+  display: flex;
+  gap:1rem;
+}
+button .tooltip{
+  width: 20rem;
+  opacity: 0;
+  position: absolute;
+  top:-7rem;
+  right: -9rem;
+  padding: 1.5rem 2rem;
+  display: flex;
+  background-color: var(--Very-Dark-Grayish-Blue);
+  border-radius: .8rem;
+  gap: 1rem;
+  align-items: center;
+}
+.tooltiptext{
+  color: var(--Grayish-Blue);
+  letter-spacing: .3rem;
+}
+.tooltip-arrow {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid hsl(217, 19%, 35%);
+}
+button:hover .tooltip{
+  opacity: 1;
+}
+@media (max-width:768px) {
+  html{
+    font-size: 50%;
+  }
+}
+@media (max-width:425px) {
+  .main-section{
+    flex-direction: column;
+    width: 30rem;
+  }
+  .left-section{
+    width: 100%;
+  }
+}
+
+
